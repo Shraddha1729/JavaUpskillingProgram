@@ -1,36 +1,36 @@
-package Lesson8;
-
-public class Main {
-    public static void main(String[] args) {
-
-        Carpet carpet1=new Carpet(8, 10);
-
-        System.out.println("Total cost for Carpet1 is " + String.format("%.2f", carpet1.getTotalCost()) + " €");
-
-        Carpet carpet2= new Carpet(5 , 6);
-        System.out.println("Total cost for Carpet2 is "+ String.format("%.2f" , carpet2.getTotalCost()) + " €");
+package Lesson9;
 
 
-        ComplexNumber num1 = new ComplexNumber(5, 3);
-        ComplexNumber num3 = new ComplexNumber(3, 1);
-        ComplexNumber num4 = new ComplexNumber(-1, 2);
 
-        num1.add(2, 4);
-        System.out.println("After addition, num1 = " + num1);
-        num1.subtract(1, 3);
-        System.out.println("After subtraction, num1 = " + num1);
+    public class Main {
+        public static void main(String[] args) {
+            SalariedEmployee Hugo = new SalariedEmployee ();
+            HourlyEmployee Frida = new HourlyEmployee();
 
-        ComplexNumber resultAdd = ComplexNumber.addNumbers(num3, num4);
-        ComplexNumber resultSubtract = ComplexNumber.subtractNumbers(num3, num4);
+            Hugo.name = "Hugo Lifbom";
+            Hugo.birthDate = "1980-08-05";
+            Hugo.employeeId = 215640656;
+            Hugo.annualSalary = 45000;
+            Hugo.hireDate = "2016-07-01";
+            System.out.println(Hugo);
+            Hugo.isRetired = false;
+            Hugo.retire();
+            System.out.println("This month salary is " + Hugo.collectPay());
+            Hugo.terminate("31.12.2025");
 
-        System.out.println("The sum of num1 and num2 is: " + resultAdd);
-        System.out.println("The difference between num1 and num2 is: " + resultSubtract);
+            System.out.println("-------------------------");
+            Frida.name = "Frida Hansen";
+            Frida.birthDate = "1984-11-10";
+            Frida.employeeId=344667546;
+            Frida.hireDate = "2016-07-01";
+            System.out.println(Frida);
+            Frida.hourlyPayRate = 7.46;
+            System.out.println("Today salary is " + Frida.collectPay());
+            System.out.println("Harry will get payed double: " + Frida.getDoublePay());
+            Frida.terminate("03.08.2026");
 
+        }
 
     }
 
 
-
-
-
-}
