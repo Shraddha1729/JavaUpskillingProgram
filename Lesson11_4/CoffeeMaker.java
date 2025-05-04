@@ -15,7 +15,7 @@ public class CoffeeMaker {
     public void brewCoffee() {
         if (hasWorkToDo) {
             System.out.println("Brewing coffee.");
-            hasWorkToDo = false; // Reset the flag after work is done
+            hasWorkToDo = false;
         }
     }
 }
