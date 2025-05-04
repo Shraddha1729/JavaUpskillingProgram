@@ -6,7 +6,7 @@ public class SmartKitchen {
     private DishWasher dishWasher = new DishWasher();
     private Refrigerator iceBox = new Refrigerator();
 
-    // Composition: expose contained objects through getters if direct access is needed
+
     public CoffeeMaker getBrewMaster() {
         return brewMaster;
     }
